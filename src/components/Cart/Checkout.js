@@ -46,7 +46,13 @@ function Checkout(props) {
       return;
     }
 
-    console.log(formInputValidity);
+    // Submit order
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postcode: enteredPostCode,
+    });
   };
 
   const nameControlClasses = `${classes.control} ${
